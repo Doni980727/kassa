@@ -15,15 +15,29 @@
     <script src="/js/script.js"></script>
     <script>
         
+        
+
         $(document).ready(function(){
     
-            $(".btn").click(function() {
-                
+            var result = 0;
+
+            $(".add").click(function() {
+  
                 $(".status").replaceWith("<h3>Din varukorg:</h3>");
-                
-                $("#cart").append("<div>"+ $(this).val() +"</div>");
+
+                var datavalue = this.getAttribute("data-value");
+
+                datavalueint = parseInt(datavalue);
+
+                result = (result + datavalueint);
+
+                $("#cart").append("<div>"+ $(this).val() + "<p>"+ datavalue + "</p></div>");
+
+                alert(result);
                 
             });
+
+            $("")
             
             
             
@@ -53,7 +67,7 @@
 
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-                        <button class="btn btn-primary" value="ASUS skärm 24'">Lägg till i varukorgen</button>
+                        <button class="btn btn-primary add" value="ASUS skärm 24'" data-value="11">Lägg till i varukorgen</button>
 
                         </div>
 
@@ -69,7 +83,7 @@
 
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-                        <button class="btn btn-primary" value="ASUS skärm 27'">Lägg till i varukorgen</button>
+                        <button class="btn btn-primary add" value="ASUS skärm 27'" data-value="12">Lägg till i varukorgen</button>
 
                         </div>
 
@@ -85,7 +99,7 @@
 
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-                        <button class="btn btn-primary" value="PHILIPS 24'">Lägg till i varukorgen</button>
+                        <button class="btn btn-primary add" value="PHILIPS 24'" data-value="13">Lägg till i varukorgen</button>
 
                         </div>
 
@@ -101,7 +115,7 @@
 
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-                        <button class="btn btn-primary" value="PHILIPS 27'">Lägg till i varukorgen</button>
+                        <button class="btn btn-primary add" value="PHILIPS 27'" data-value="14">Lägg till i varukorgen</button>
 
                         </div>
 
@@ -117,7 +131,7 @@
 
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-                        <button class="btn btn-primary" value="ACER skärm 24'">Lägg till i varukorgen</button>
+                        <button class="btn btn-primary add" value="ACER skärm 24'" data-value="15">Lägg till i varukorgen</button>
 
                         </div>
 
@@ -133,7 +147,7 @@
 
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-                        <button class="btn btn-primary" value="ACER skärm 27'">Lägg till i varukorgen</button>
+                        <button class="btn btn-primary add" value="ACER skärm 27'" data-value="16">Lägg till i varukorgen</button>
 
                         </div>
 
@@ -159,6 +173,12 @@
                         
                             Köp
                         
+                        </button>
+
+                        <button class="btn btn-primary clear">
+
+                            Clear
+
                         </button>
                     
                     </div>
