@@ -37,6 +37,32 @@
     
 });
             
+            $(document).ready(function(){
+    
+            var result = 0;
+
+            $(".add").click(function() {
+  
+                $(".status").replaceWith("<h3>Din varukorg:</h3>");
+
+                var datavalue = this.getAttribute("data-value");
+
+                datavalueint = parseInt(datavalue);
+
+                result = (result + datavalueint);
+
+                $("#myShop").append("<div>"+ $(this).val() + "<p>"+ datavalue + "</p></div>");
+
+                alert(result);
+                
+            });
+
+            $("")
+            
+            
+            
+        });
+            
            
 
         </script>
@@ -71,10 +97,9 @@
     
         <div id="myShop" class="shop">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img id="closecart" src="images/ic_remove_shopping_cart_white_48px.svg"></a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+            
+            <h3 class="status">Din varukorg är tom</h3>
+            
         </div>
         
         <div id="mySidenav" class="sidenav">
