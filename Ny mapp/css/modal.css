@@ -19,8 +19,8 @@
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    height: 40%
+    width: 50%;
+    text-align: center;
 }
 
 /* The Close Button */
@@ -36,4 +36,9 @@
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.form-control{
+    margin-left: 25%;
+    width: 50%
 }

@@ -38,6 +38,18 @@
     background-color: #555 /* Light Black */
 }
 
+body{
+    font-size: 1.5em;
+}
+
+.card-text {
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 450px) {
     
     #mySidenav a {
