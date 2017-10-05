@@ -70,6 +70,20 @@ body{
     margin-right: 20%;
 }
 
+.status {
+    color: white;
+    margin-left: 1em;
+}
+
+.shop-item {
+    color: white;
+    margin-left: 2em;
+}
+
+#cartBuy {
+    margin-left: 2em;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the shop (less padding and a smaller font size) */
 @media only screen and (max-height: 450px) {
     .shop {padding-top: 60px;}

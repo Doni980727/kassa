@@ -43,7 +43,7 @@
 
             $(".add").click(function() {
   
-                $(".status").replaceWith("<h3>Din varukorg:</h3>");
+                $(".status").replaceWith("<h3 class='status'>Din varukorg:</h3>");
 
                 var datavalue = this.getAttribute("data-value");
 
@@ -51,7 +51,7 @@
 
                 result = (result + datavalueint);
 
-                $("#myShop").append("<div>"+ $(this).val() + "<p>"+ datavalue + "</p></div>");
+                $("#shopCart").append("<div class='shop-item'>"+ $(this).val() + "<p>"+ datavalue + "</p></div>");
 
                 alert(result);
                 
@@ -98,7 +98,13 @@
         <div id="myShop" class="shop">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img id="closecart" src="images/ic_remove_shopping_cart_white_48px.svg"></a>
             
+            <div id="shopCart">
+
             <h3 class="status">Din varukorg är tom</h3>
+
+            </div>
+
+            <button id="cartBuy" class="btn btn-primary">Köp</button>
             
         </div>
         
