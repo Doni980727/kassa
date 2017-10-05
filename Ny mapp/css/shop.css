@@ -92,6 +92,15 @@ body{
     margin-left: 2em;
 }
 
+.fixed {
+    position:fixed;
+    width: 100%;
+    top:0;
+    z-index: 1;
+}
+
+
+
 /* On smaller screens, where height is less than 450px, change the style of the shop (less padding and a smaller font size) */
 @media only screen and (max-height: 450px) {
     .shop {padding-top: 60px;}
