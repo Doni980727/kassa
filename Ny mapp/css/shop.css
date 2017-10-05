@@ -87,4 +87,24 @@ body{
         padding-left: 8px;
     }
 
+   
+
 }
+
+@media only screen and (max-width: 768px) {
+    .col-sm-4 {
+        width: 50%;
+        float: left;
+        
+
+    }
+
+   }
+
+@media only screen and (max-width: 450px) {
+    .col-sm-4 {
+        width: 100%;
+        margin: auto;
+    }
+}
+
