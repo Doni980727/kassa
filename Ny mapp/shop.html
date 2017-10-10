@@ -169,8 +169,8 @@
                 <ul id="show-cart">
                 <li>???????</li>
             </ul>
-            <div style="color: white">You have <span style="color: white" id="count-cart">X</span> items in your cart</div>
-            <div style="color: white">Total Cart:$<span style="color: white" id="total-cart"></span></div>
+            <div class="cart-count" style="color: white">You have <span style="color: white" id="count-cart">X</span> items in your cart</div>
+            <div class="cart-count" style="color: white">Total Cart:$<span style="color: white" id="total-cart"></span></div>
 
             </div>
 
@@ -534,20 +534,23 @@
                 var output = "";
 
                 for (var i in cartArray) {
-                    output += "<li style='color: white'>"
+                    output += "<div class='row'> <div class='col-lg-10'>"
                         +cartArray[i].name
-                        +" <input class='item-count' type='number' data-name='"
-                        +cartArray[i].name
-                        +"' value='"+cartArray[i].count+"' >"
-                        +" x "+cartArray[i].price
+                        +" X "+cartArray[i].price
                         +" = "+cartArray[i].total
-                        +" <button class='plus-item' data-name='"
+                        +"<div class='input-group'>"
+                        +" <input class='item-count form-control' type='text' data-name='"
+                        +cartArray[i].name
+                        +"' value='"+cartArray[i].count+"'> "
+                        +"<div class='input-group-btn'> "
+                        +" <button type='button' class='plus-item btn btn-default' data-name='"
                         +cartArray[i].name+"'>+</button>"
-                        +" <button class='subtract-item' data-name='"
+                        +" <button type='button' class='subtract-item btn btn-default' data-name='"
                         +cartArray[i].name+"'>-</button>"
-                        +" <button class='delete-item' data-name='"
+                        +" <button type='button' class='delete-item btn btn-default' data-name='"
                         +cartArray[i].name+"'>X</button>"
-                        +"</li>";
+                        +"</div>"
+                        +" </div> </div> </div>";
                 }
 
                 $("#show-cart").html(output);
