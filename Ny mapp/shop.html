@@ -159,7 +159,7 @@
                 
                 <form>
                     
-                    <input type="text" class="form-control" name="search" placeholder="Search..">
+                    <input type="text" class="form-control search" name="search" placeholder="Search..">
                     
                 </form>
 
@@ -302,14 +302,11 @@
                 for (var i in cartArray) {
                     output += "<div class='row'> <div class='col-lg-10'>"
                         +cartArray[i].name
-<<<<<<< HEAD
                         +" X "+cartArray[i].price
-=======
                         +" <input  class='item-count form-control' type='number' data-name='"
                         +cartArray[i].name
                         +"' value='"+cartArray[i].count+"' >"
                         +" x "+cartArray[i].price
->>>>>>> b3d30eac999613782a0d9b9945c0d2e49612ed84
                         +" = "+cartArray[i].total
                         +"<div class='input-group'>"
                         +" <input class='item-count form-control' type='text' data-name='"
