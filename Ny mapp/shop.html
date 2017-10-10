@@ -195,7 +195,7 @@
                         
                         <label for="name">Förnamn:</label>
                         
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control modal-control" id="name">
                         
                     </div>
                     
@@ -203,7 +203,7 @@
                         
                         <label for="name">Efternamn:</label>
                         
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control modal-control" id="name">
                         
                     </div>
                     
@@ -211,7 +211,7 @@
                         
                         <label for="name">Adress:</label>
                         
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control modal-control" id="name">
                         
                     </div>
                     
@@ -219,7 +219,7 @@
                         
                         <label for="name">Postnummer:</label>
                         
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control modal-control" id="name">
                         
                     </div>
                     
@@ -227,7 +227,7 @@
                         
                         <label for="name">Stad:</label>
                         
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control modal-control" id="name">
                         
                     </div>
                     
@@ -300,12 +300,8 @@
                 var output = "";
 
                 for (var i in cartArray) {
-                    output += "<div class='row'> <div class='col-lg-10'>"
+                    output += " <div class='row'> <div class='col-lg-10'>"
                         +cartArray[i].name
-                        +" X "+cartArray[i].price
-                        +" <input  class='item-count form-control' type='number' data-name='"
-                        +cartArray[i].name
-                        +"' value='"+cartArray[i].count+"' >"
                         +" x "+cartArray[i].price
                         +" = "+cartArray[i].total
                         +"<div class='input-group'>"
